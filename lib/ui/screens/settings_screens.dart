@@ -8,7 +8,7 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ProfileAppBar(title: 'Settings'), // Use the reusable AppBar
+      appBar: ProfileAppBar(title: 'Setting'), // Use the reusable AppBar
       body: Container(
         // Wrap the body content in a Container for rounded corners
         decoration: BoxDecoration(
