@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TotalCard extends StatelessWidget {
-  const TotalCard({super.key});
+  const TotalCard({super.key, required totalData});
 
   @override
   Widget build(BuildContext context) {
