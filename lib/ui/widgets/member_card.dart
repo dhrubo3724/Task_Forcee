@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:task_force/models/member.dart';
 
 class MemberCard extends StatelessWidget {
-  const MemberCard({super.key, required member});
+  const MemberCard({super.key, required this.member});
+  final Member member;
 
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: ThemeData.dark().cardColor,
+      elevation: 3,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -16,12 +20,15 @@ class MemberCard extends StatelessWidget {
                 child: CircleAvatar(child: Icon(Icons.person)),
               ),
               SizedBox(width: 10),
-              Text('Name'),
+              Text(member.name),
             ],
           ),
 
           SizedBox(width: 10),
-          Padding(padding: const EdgeInsets.all(8.0), child: Text('৳ 2000.00')),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(member.balance.toStringAsFixed(2)),
+          ),
         ],
       ),
     );

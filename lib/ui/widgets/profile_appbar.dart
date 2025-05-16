@@ -17,7 +17,8 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor:
           backgroundColor ??
-          Colors.white, // Use provided color or default to green
+          ThemeData.dark()
+              .cardColor, // Use provided color or default to theme.color, // Use provided color or default to green
       title: Text(title), // Use the passed title
       centerTitle:
           true, // Center the title (you can make this a parameter too if needed)

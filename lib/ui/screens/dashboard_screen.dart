@@ -5,7 +5,7 @@ import '../widgets/profile_appbar.dart';
 
 class DashboardScreen extends StatefulWidget {
   // Renamed class
-  const DashboardScreen({super.key});
+  DashboardScreen({super.key});
 
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
@@ -21,13 +21,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
       // appBar: ProfileAppBar(title: 'Dashboard'), // Using the ProfileAppBar widget with a title
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.blue,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
           ),
         ),
-        child: DashboardContent(),
+        child: DashboardContent(
+          // Pass the list of members to the DashboardContent widget
+        ),
       ),
     );
   }

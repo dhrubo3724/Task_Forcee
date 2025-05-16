@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../ui/screens/dashboard_screen.dart';
-import '../ui/screens/report_screen.dart';
+import '../ui/screens/report_list_screen.dart';
 import '../ui/screens/settings_screens.dart';
 import '../ui/screens/transaction_screen.dart';
 
@@ -18,7 +18,7 @@ class _AppNavigationState extends State<AppNavigation> {
   final List<Widget> _screens = [
     DashboardScreen(),
     TransactionsScreen(), // Replace with your actual screen widgets
-    ReportsScreen(),
+    ReportListScreen(),
     SettingsScreen(),
   ];
 
@@ -31,7 +31,7 @@ class _AppNavigationState extends State<AppNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      extendBody: true,
       body: _screens[_selectedIndex], // Display the selected screen
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(

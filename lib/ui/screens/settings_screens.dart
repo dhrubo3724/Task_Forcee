@@ -12,7 +12,7 @@ class SettingsScreen extends StatelessWidget {
       body: Container(
         // Wrap the body content in a Container for rounded corners
         decoration: BoxDecoration(
-          color: Colors.blue, // Set the background color for the body content
+          // Set the background color for the body content
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20), // Apply circular radius to top-left
             topRight: Radius.circular(20), // Apply circular radius to top-right

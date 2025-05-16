@@ -14,7 +14,6 @@ class TransactionsScreen extends StatelessWidget {
       appBar: ProfileAppBar(title: 'Transactions'), // Use the reusable AppBar
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.blue,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -22,28 +21,35 @@ class TransactionsScreen extends StatelessWidget {
         ),
         child: Center(
           // Placeholder content
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.swap_horiz, size: 80, color: Colors.grey[600]),
-              SizedBox(height: 20),
-              Text(
-                'Transactions List',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.swap_horiz,
+                  size: 80,
+                  color: ThemeData.dark().primaryColor,
                 ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                'This is where your transaction history will be displayed.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, color: Colors.grey[600]),
-              ),
-              // You will replace this with your actual transaction list view
-              // Example: ListView.builder(...)
-            ],
+                SizedBox(height: 20),
+                Text(
+                  'Transactions List',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: ThemeData.dark().primaryColor,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'This is where your transaction history will be displayed.',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                // You will replace this with your actual transaction list view
+                // Example: ListView.builder(...)
+              ],
+            ),
           ),
         ),
       ),

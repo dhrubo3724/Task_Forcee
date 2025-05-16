@@ -26,26 +26,22 @@ class DashboardContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blue,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 6.0),
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Welcome User!'), // Example dynamic text
-                ElevatedButton(
-                  onPressed: () {
-                    // TODO: Implement add member functionality
-                    print('Add member button pressed');
-                  },
-                  child: Icon(Icons.add),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.add, color: ThemeData.dark().primaryColor),
                 ),
               ],
             ),
@@ -54,7 +50,11 @@ class DashboardContent extends StatelessWidget {
             SizedBox(height: 10),
             Text(
               'Members',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: Colors.black,
+              ),
             ),
             SizedBox(height: 10),
             Expanded(
