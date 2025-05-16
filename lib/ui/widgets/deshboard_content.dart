@@ -3,6 +3,7 @@ import 'package:task_force/ui/widgets/total_card_widget.dart';
 
 import '../../models/member.dart';
 import '../../models/total_data.dart';
+import '../screens/expenses_add_screen.dart';
 import 'member_card.dart';
 
 class DashboardContent extends StatelessWidget {
@@ -40,7 +41,15 @@ class DashboardContent extends StatelessWidget {
               children: [
                 Text('Welcome User!'), // Example dynamic text
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Example of navigating to it:
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AddExpenseScreenUIOnly(),
+                      ),
+                    );
+                  },
                   icon: Icon(Icons.add, color: ThemeData.dark().primaryColor),
                 ),
               ],

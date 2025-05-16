@@ -5,8 +5,8 @@ import '../widgets/profile_appbar.dart'; // Assuming you want the same AppBar
 // You'll likely need a Transaction model later
 // import 'package:task_force/models/transaction.dart';
 
-class TransactionsScreen extends StatelessWidget {
-  const TransactionsScreen({super.key});
+class EmptyTransactionsScreen extends StatelessWidget {
+  const EmptyTransactionsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

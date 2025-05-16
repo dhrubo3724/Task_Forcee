@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../widgets/profile_appbar.dart'; // Assuming you want the same AppBar
 
-class ReportsScreen extends StatelessWidget {
-  const ReportsScreen({super.key});
+class EmptyReportsScreen extends StatelessWidget {
+  const EmptyReportsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

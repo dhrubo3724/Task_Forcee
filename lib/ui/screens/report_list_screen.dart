@@ -55,7 +55,7 @@ class ReportListScreen extends StatelessWidget {
         ),
         child:
             demoReports.isEmpty
-                ? ReportsScreen()
+                ? EmptyReportsScreen()
                 : ListView.builder(
                   itemCount:
                       demoReports.length, // Use the number of demo reports

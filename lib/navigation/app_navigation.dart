@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../ui/screens/dashboard_screen.dart';
 import '../ui/screens/report_list_screen.dart';
 import '../ui/screens/settings_screens.dart';
-import '../ui/screens/transaction_screen.dart';
+import '../ui/screens/transection_screen.dart';
 
 class AppNavigation extends StatefulWidget {
   const AppNavigation({super.key});
