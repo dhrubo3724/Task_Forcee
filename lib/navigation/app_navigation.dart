@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../ui/screens/dashboard_screen.dart';
 import '../ui/screens/report_list_screen.dart';
-import '../ui/screens/settings_screens.dart';
 import '../ui/screens/transection_screen.dart';
+import '../ui/screens/tree_view.dart';
 
 class AppNavigation extends StatefulWidget {
   const AppNavigation({super.key});
@@ -19,7 +19,7 @@ class _AppNavigationState extends State<AppNavigation> {
     DashboardScreen(),
     TransactionsScreen(), // Replace with your actual screen widgets
     ReportListScreen(),
-    SettingsScreen(),
+    CategoryTree(),
   ];
 
   void _onItemTapped(int index) {
