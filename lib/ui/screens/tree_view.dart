@@ -13,7 +13,7 @@ class _CategoryTreeState extends State<CategoryTree> {
     Category(
       "Vehicles",
       children: [
-        Category("Electric Vehicles", children: [Category("Tesla")]),
+        Category("Electric Vehicle", children: [Category("Tesla")]),
       ],
     ),
     Category("Apparel", children: [Category("Sportswear")]),
