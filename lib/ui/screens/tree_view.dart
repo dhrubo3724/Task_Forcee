@@ -37,16 +37,15 @@ class _CategoryTreeState extends State<CategoryTree> {
 }
 
 class CategoryWidget extends StatelessWidget {
-  final Category category;
-  final int level;
-  final VoidCallback onToggle;
-
   const CategoryWidget({
-    Key? key,
+    super.key,
     required this.category,
     required this.level,
     required this.onToggle,
-  }) : super(key: key);
+  });
+  final Category category;
+  final int level;
+  final VoidCallback onToggle;
 
   @override
   Widget build(BuildContext context) {
@@ -87,15 +86,13 @@ class CategoryWidget extends StatelessWidget {
           ),
         ),
         if (category.isExpanded)
-          ...category.children
-              .map(
-                (child) => CategoryWidget(
-                  category: child,
-                  level: level + 1,
-                  onToggle: onToggle,
-                ),
-              )
-              .toList(),
+          ...category.children.map(
+            (child) => CategoryWidget(
+              category: child,
+              level: level + 1,
+              onToggle: onToggle,
+            ),
+          ),
       ],
     );
   }

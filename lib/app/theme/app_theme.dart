@@ -5,7 +5,7 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: const Color(
-      0xFF5C677D,
+      0xFFFFFFFF,
     ), // Your specified scaffold color
     cardColor: const Color(0xFF979DAC), // Your specified card color
     primaryColor: const Color(0xFF979DAC), // Your specified yellow accent
