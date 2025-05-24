@@ -8,7 +8,6 @@ class MemberCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: ThemeData.dark().cardColor,
       elevation: 3,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

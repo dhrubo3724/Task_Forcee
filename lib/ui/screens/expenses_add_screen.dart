@@ -8,13 +8,18 @@ class AddExpenseScreenUIOnly extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final theme = Theme.of(context); // You might use theme for styling
-
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add New Expense'),
-        // backgroundColor: theme.appBarTheme.backgroundColor,
-        // foregroundColor: theme.appBarTheme.foregroundColor,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+        ),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 40.0),
+          child: Text('Add New Expense'),
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -123,8 +128,11 @@ class AddExpenseScreenUIOnly extends StatelessWidget {
 
             // --- Submit Button ---
             ElevatedButton.icon(
-              icon: const Icon(Icons.add_circle_outline),
-              label: const Text('Add Expense'),
+              icon: const Icon(Icons.add_circle_outline, color: Colors.white),
+              label: const Text(
+                'Add Expense',
+                style: TextStyle(color: Colors.white),
+              ),
               onPressed: () {
                 // _submitExpense(); // No submission logic
                 print('Add Expense button tapped (UI only)');

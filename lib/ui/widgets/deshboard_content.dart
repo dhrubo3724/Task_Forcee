@@ -40,9 +40,8 @@ class DashboardContent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Welcome User!'), // Example dynamic text
-                IconButton(
+                ElevatedButton(
                   onPressed: () {
-                    // Example of navigating to it:
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -50,7 +49,8 @@ class DashboardContent extends StatelessWidget {
                       ),
                     );
                   },
-                  icon: Icon(Icons.add, color: ThemeData.dark().primaryColor),
+
+                  child: Text('Add +'),
                 ),
               ],
             ),

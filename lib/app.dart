@@ -9,7 +9,10 @@ class TaskForce extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: AppTheme.darkTheme,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.light,
+
       debugShowCheckedModeBanner: false,
       home: AppNavigation(), // Using the corrected screen name
     );

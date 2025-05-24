@@ -5,10 +5,10 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: const Color(
-      0xFFFFFFFF,
+      0xFF1E1E2F,
     ), // Your specified scaffold color
-    cardColor: const Color(0xFF979DAC), // Your specified card color
-    primaryColor: const Color(0xFF979DAC), // Your specified yellow accent
+    cardColor: const Color(0xFF2C3E50), // Your specified card color
+    primaryColor: const Color(0xFF2ECC71), // Your specified yellow accent
     // ColorScheme is important for Material 3 components to pick up primary/accent colors correctly.
     // We'll derive it from your primaryColor.
     colorScheme: ColorScheme.fromSeed(
@@ -29,7 +29,7 @@ class AppTheme {
         fontSize: 16.0,
       ), // Added common font size
       bodyMedium: TextStyle(
-        color: Color(0xFFB3B3B3),
+        color: Color(0xFFEAEAEA),
         fontSize: 14.0,
       ), // Added common font size
       // It's good practice to define more styles for consistency, even if not in your original ThemeData:
@@ -56,9 +56,9 @@ class AppTheme {
     ), // Your specified icon theme
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFF979DAC), // Your specified AppBar background
+      backgroundColor: Color(0xFF2C3E50), // Your specified AppBar background
       foregroundColor: Color(
-        0xFF979DAC,
+        0xFFEAEAEA,
       ), // Your specified AppBar foreground (icons, text)
       elevation: 0, // Common for dark themes
       titleTextStyle: TextStyle(
@@ -70,12 +70,6 @@ class AppTheme {
 
     // It's also good to define other component themes for consistency:
     // Example for CardTheme (to ensure it uses cardColor and has consistent shape/margin)
-    cardTheme: CardTheme(
-      color: const Color(0xFF1A1A1A), // Explicitly use your cardColor
-      elevation: 1.0,
-      margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-    ),
 
     // Example for ElevatedButton
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -87,7 +81,62 @@ class AppTheme {
     ),
     useMaterial3: true, // Recommended for new projects
   );
+  static final ThemeData lightTheme = ThemeData(
+    brightness: Brightness.light,
+    scaffoldBackgroundColor: const Color(0xFFF9FAFB),
+    cardColor: const Color(0xFF2C3E50),
+    primaryColor: const Color(0xFF2ECC71),
 
-  // If you had a light theme, it would go here:
-  // static final ThemeData lightTheme = ThemeData(...);
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: const Color(0xFF556B2F),
+      brightness: Brightness.light,
+    ),
+
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(color: Colors.white, fontSize: 16.0),
+      bodyMedium: TextStyle(color: Color(0xFF2C3E50), fontSize: 14.0),
+
+      displayLarge: TextStyle(
+        color: Colors.white,
+        fontSize: 57.0,
+        fontWeight: FontWeight.bold,
+      ),
+      titleLarge: TextStyle(
+        color: Colors.white,
+        fontSize: 22.0,
+        fontWeight: FontWeight.w500,
+      ),
+      labelLarge: TextStyle(
+        color: Colors.white,
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+      ),
+    ),
+
+    iconTheme: const IconThemeData(color: Colors.white),
+
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color(0xFF2C3E50),
+      foregroundColor: Color(0xFF2C3E50),
+      elevation: 1, // Common for dark themes
+      titleTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 20.0,
+        fontWeight: FontWeight.w500,
+      ),
+    ),
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF2C3E50),
+        foregroundColor: Colors.black,
+        textStyle: const TextStyle(
+          fontSize: 14.0,
+          fontWeight: FontWeight.w500,
+          color: Colors.white,
+        ),
+      ),
+    ),
+    useMaterial3: true,
+  );
 }

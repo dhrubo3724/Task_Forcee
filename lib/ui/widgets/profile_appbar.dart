@@ -6,19 +6,17 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? backgroundColor; // Optional background color
 
   const ProfileAppBar({
-    Key? key,
+    super.key,
     required this.title,
     this.actions,
     this.backgroundColor, // Allow customizing background color
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor:
-          backgroundColor ??
-          ThemeData.dark()
-              .cardColor, // Use provided color or default to theme.color, // Use provided color or default to green
+      backgroundColor: backgroundColor,
+      // Use provided color or default to theme.color, // Use provided color or default to green
       title: Text(title), // Use the passed title
       centerTitle:
           true, // Center the title (you can make this a parameter too if needed)

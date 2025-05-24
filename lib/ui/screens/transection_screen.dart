@@ -65,10 +65,6 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
       case TransactionType.expense:
         return Colors.red[400] ?? Colors.red;
       case TransactionType.transfer:
-        return Theme.of(
-          context,
-        ).colorScheme.onSurface.withOpacity(0.7); // Neutral color
-      default:
         return Theme.of(context).colorScheme.onSurface;
     }
   }
@@ -112,16 +108,9 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
       itemBuilder: (context, index) {
         final transaction = _transactions[index];
         return Card(
-          // Use CardTheme from your AppTheme
-          // elevation: theme.cardTheme.elevation,
-          // margin: theme.cardTheme.margin,
-          // shape: theme.cardTheme.shape,
-          // color: theme.cardTheme.color,
           child: ListTile(
             leading: CircleAvatar(
-              backgroundColor: _getColorForAmount(
-                transaction,
-              ).withOpacity(0.15),
+              backgroundColor: _getColorForAmount(transaction),
               foregroundColor: _getColorForAmount(transaction),
               child: Icon(_getIconForTransaction(transaction), size: 24),
             ),
@@ -172,7 +161,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
             ),
             onTap: () {
               // Handle transaction tap, e.g., navigate to detail screen
-              print('Tapped on: ${transaction.title}');
+
               // Navigator.push(context, MaterialPageRoute(builder: (context) => TransactionDetailScreen(transaction: transaction)));
             },
           ),

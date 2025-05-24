@@ -6,7 +6,6 @@ class TotalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: ThemeData.dark().cardColor,
       elevation: 4,
       child: Padding(
         padding: const EdgeInsets.all(16),

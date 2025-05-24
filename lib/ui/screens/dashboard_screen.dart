@@ -5,7 +5,7 @@ import '../widgets/profile_appbar.dart';
 
 class DashboardScreen extends StatefulWidget {
   // Renamed class
-  DashboardScreen({super.key});
+  const DashboardScreen({super.key});
 
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
