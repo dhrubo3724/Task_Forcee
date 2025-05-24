@@ -39,7 +39,7 @@ class DashboardContent extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Welcome User!'), // Example dynamic text
+                Text('Welcome User'), // Example dynamic text
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
