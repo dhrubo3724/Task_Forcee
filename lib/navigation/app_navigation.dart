@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../ui/screens/dashboard_screen.dart';
-import '../ui/screens/dropdown_design.dart';
 import '../ui/screens/report_list_screen.dart';
+import '../ui/screens/search_anchor_demo.dart';
 import '../ui/screens/transection_screen.dart';
 
 class AppNavigation extends StatefulWidget {
@@ -19,7 +19,9 @@ class _AppNavigationState extends State<AppNavigation> {
     DashboardScreen(),
     TransactionsScreen(), // Replace with your actual screen widgets
     ReportListScreen(),
-    DeviceSelector(),
+    SearchAnchorWithTap(),
+    // CustomTabView(),
+    // DeviceSelector(),
     // CategoryTree(),
   ];
 
