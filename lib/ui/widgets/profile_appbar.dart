@@ -9,7 +9,8 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     required this.title,
     this.actions,
-    this.backgroundColor, // Allow customizing background color
+    this.backgroundColor,
+    // Allow customizing background color
   });
 
   @override
@@ -17,7 +18,14 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: backgroundColor,
       // Use provided color or default to theme.color, // Use provided color or default to green
-      title: Text(title), // Use the passed title
+      title: Text(
+        title,
+        style: TextStyle(
+          color: Colors.white, // Default text color
+          fontSize: 20, // Default font size
+          fontWeight: FontWeight.bold, // Default font weight
+        ),
+      ), // Use the passed title
       centerTitle:
           true, // Center the title (you can make this a parameter too if needed)
       actions: actions, // Include optional actions

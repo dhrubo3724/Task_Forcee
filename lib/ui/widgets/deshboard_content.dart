@@ -25,12 +25,10 @@ class DashboardContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(20),
+        topRight: Radius.circular(20),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 6.0),
@@ -49,13 +47,20 @@ class DashboardContent extends StatelessWidget {
                       ),
                     );
                   },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
 
-                  child: Text('Add +'),
+                    minimumSize: Size(100, 40),
+                  ),
+
+                  child: Text('Add +', style: TextStyle(color: Colors.white)),
                 ),
               ],
             ),
             SizedBox(height: 10),
-            TotalCard(totalData: totalData), // Passing total data
+            TotalCard(), // Passing total data
             SizedBox(height: 10),
             Text(
               'Members',

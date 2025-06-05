@@ -43,10 +43,7 @@ class _AppNavigationState extends State<AppNavigation> {
         ),
         child: BottomNavigationBar(
           items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard),
-              label: 'Dashboard',
-            ),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Dashboard'),
             BottomNavigationBarItem(
               icon: Icon(Icons.swap_horiz),
               label: 'Transactions',
