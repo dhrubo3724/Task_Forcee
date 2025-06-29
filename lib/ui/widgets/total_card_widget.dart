@@ -5,84 +5,47 @@ class TotalCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 320,
-      height: 200,
-      child: Card(
-        elevation: 4,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Total Balance '),
-                  Text(
-                    '৳ 20,000.00',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                  ),
-                ],
-              ),
+    return Card(
+      elevation: 4,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Total Balance '),
+                Text(
+                  '৳ 20,000.00',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                ),
+              ],
+            ),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  buildDepositText(),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            'Expenses',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: CircleAvatar(
-                              radius: 9,
-                              backgroundColor: Colors.red[400],
-                              child: Icon(
-                                Icons.arrow_upward,
-                                color: Colors.white,
-                                size: 15,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        '৳ 20,000.00',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                buildDepositText('Deposit', '৳ 20,000.00'),
+                buildDepositText('Expenses', '৳ 20,000.00'),
+              ],
+            ),
+          ],
         ),
       ),
     );
   }
 
-  Widget buildDepositText() {
+  Widget buildDepositText(String text1, String text2) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
             Text(
-              'Deposit',
+              text1,
+              //'Deposit',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
             ),
             Padding(
@@ -100,7 +63,8 @@ class TotalCard extends StatelessWidget {
           ],
         ),
         Text(
-          '৳ 20,000.00',
+          text2,
+          // '৳ 20,000.00',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
         ),
       ],

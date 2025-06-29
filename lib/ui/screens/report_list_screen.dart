@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_force/ui/screens/empty_report_screen.dart';
 
 import '../../models/report_item.dart';
 import '../widgets/report_item_card.dart';
@@ -54,16 +53,15 @@ class ReportListScreen extends StatelessWidget {
           ),
         ),
         child:
-            demoReports.isEmpty
-                ? EmptyReportsScreen()
-                : ListView.builder(
-                  itemCount:
-                      demoReports.length, // Use the number of demo reports
-                  itemBuilder: (context, index) {
-                    // Create a ReportItemCard for each report item
-                    return ReportItemCard(reportItem: demoReports[index]);
-                  },
-                ),
+        // demoReports.isEmpty
+        //     ? EmptyReportsScreen():
+        ListView.builder(
+          itemCount: demoReports.length, // Use the number of demo reports
+          itemBuilder: (context, index) {
+            // Create a ReportItemCard for each report item
+            return ReportItemCard(reportItem: demoReports[index]);
+          },
+        ),
       ),
     );
   }

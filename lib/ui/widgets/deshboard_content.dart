@@ -3,7 +3,6 @@ import 'package:task_force/ui/widgets/total_card_widget.dart';
 
 import '../../models/member.dart';
 import '../../models/total_data.dart';
-import '../screens/expenses_add_screen.dart';
 import 'member_card.dart';
 
 class DashboardContent extends StatelessWidget {
@@ -40,12 +39,15 @@ class DashboardContent extends StatelessWidget {
                 Text('Welcome User'), // Example dynamic text
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const AddExpenseScreenUIOnly(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) {
+                    //       //
+                    //     },
+                    //     const AddExpenseScreenUIOnly(),
+                    //   ),
+                    // );
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:task_force/models/repo/demo_transection_data.dart';
 
 import '../../models/transection.dart';
-import 'empty_transaction_screen.dart'; // Import your demo data
 // import 'package:task_force/widgets/profile_appbar.dart'; // Your ProfileAppBar
 // import 'package:task_force/app/theme/app_theme.dart'; // Your AppTheme
 
@@ -22,9 +21,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
   @override
   void initState() {
     super.initState();
-    // Load demo transactions directly when the screen initializes
-    // In a real app, you might fetch from a repository here and then
-    // decide whether to use demo data based on the result.
+
     _transactions = DemoTransactions.transactions;
   }
 
@@ -93,9 +90,9 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
         ),
 
         child:
-            _transactions.isEmpty
-                ? EmptyTransactionsScreen()
-                : _buildTransactionList(theme),
+        // _transactions.isEmpty
+        //     ? EmptyTransactionsScreen():
+        _buildTransactionList(theme),
         // _buildTransactionList(theme)
       ),
     );
