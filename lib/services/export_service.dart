@@ -6,7 +6,7 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../features/transactions/data/models/transaction_model.dart';
+import '../module/transactions/data/models/transaction_model.dart';
 
 class ExportService {
   Future<void> exportAsCSV() async {

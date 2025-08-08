@@ -3,7 +3,7 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'app.dart';
-import 'features/transactions/data/models/transaction_model.dart';
+import 'module/transactions/data/models/transaction_model.dart';
 
 // void main() {
 //   runApp(const TaskForce());

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:task_force/features/deshboard/presentation/view/dashboard_screen.dart';
-import 'package:task_force/features/reports/presentation/view/reports_view.dart';
-import 'package:task_force/features/settings/presentation/view/settings_view.dart';
+import 'package:task_force/module/reports/presentation/view/reports_view.dart';
+import 'package:task_force/module/settings/presentation/view/settings_view.dart';
 
 import '../ui/screens/transaction_screen.dart';
+import 'deshboard/presentation/view/dashboard_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});

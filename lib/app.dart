@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/theme/theme_cubit.dart';
-import 'features/main_navigation_screen.dart';
+import 'module/main_navigation_screen.dart';
 
 class TaskForce extends StatelessWidget {
   const TaskForce({super.key});
