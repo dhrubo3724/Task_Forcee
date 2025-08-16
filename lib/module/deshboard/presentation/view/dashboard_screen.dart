@@ -159,12 +159,20 @@ class DashboardScreen extends StatelessWidget {
                               color:
                                   geter()[index].isIncome!
                                       ? Colors.green
-                                      : Colors.red,
+                                      : Colors.blue,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
 
-                          onTap: () {},
+                          onTap: () {
+                            // Handle tap event, e.g., navigate to transaction details
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => TransactionDetailsScreen(txn),
+                            //   ),
+                            // );
+                          },
                         );
                       },
                       childCount:
