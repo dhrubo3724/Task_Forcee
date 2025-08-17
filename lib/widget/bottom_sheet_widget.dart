@@ -39,7 +39,10 @@ class BottomSheetWidget extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    child: Text('Submit'),
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                 ],
               ),

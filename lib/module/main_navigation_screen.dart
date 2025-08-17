@@ -22,6 +22,17 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     const ReportsScreen(),
     const SettingsScreen(),
   ];
+  int _getPageIndex(int conceptualIndex) {
+    if (conceptualIndex < 2 || conceptualIndex >= _pages.length) {
+      throw RangeError.range(
+        conceptualIndex,
+        0,
+        _pages.length - 1,
+        'conceptualIndex',
+      );
+    }
+    return _currentIndex;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +52,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             icon: Icon(Icons.swap_horiz),
             label: 'Transactions',
           ),
-          SizedBox.shrink(
-            child: SizedBox(
-              width:
-                  40, // Adjust width to match the icon size// Adjust height to match the icon size
-            ),
-          ),
+
           NavigationDestination(icon: Icon(Icons.bar_chart), label: 'Reports'),
           NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
         ],

@@ -20,7 +20,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final txns = Hive.box<TransactionModel>('transactions').values.toList();
 
     // TODO: Implement actual file export (CSV, JSON, etc.)
-    print("Exporting ${txns.length} transactions...");
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text("Exported data (placeholder).")),
     );
